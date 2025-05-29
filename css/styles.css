@@ -7,15 +7,20 @@
             }
             
             body {
-                background-image: url(../assets/IMG-20250315-WA0002.png);
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
                 margin: 0;
                 padding: 0;
                 width: 100%;
                 z-index: -40;
+                background-color: #364158;
+                height: 100dvh;
+            }
+            
+            .bg-section {
+                background-image: url(../assets/IMG-20250315-WA0002.png);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
             }
             
             html {
