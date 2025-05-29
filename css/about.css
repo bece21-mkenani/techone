@@ -4,9 +4,9 @@
             margin: 0;
             padding: 0;
             width: 100%;
+            z-index: -40;
+            background-color: #364158;
             height: 100dvh;
-            z-index: -30;
-            background-color: #f4f4f4;
         }
         
         .portfolio-section {
