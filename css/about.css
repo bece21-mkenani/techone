@@ -1,205 +1,225 @@
-    /* Portfolio Section */
-    
-    .portfolio-section {
-        background-color: #f8f9fa;
-    }
-    
-    h5 {
-        font-size: 2.25rem;
-        margin-top: 40px;
-        font-weight: 600;
-        text-align: center;
-        color: #1E90FF;
-    }
-    /* Portfolio Grid Section */
-    
-    .portfolio-grid {
-        padding: 100px 0;
-        background-color: #fff;
-    }
-    
-    .mt-50 {
-        margin-top: 50px;
-    }
-    
-    .portfolio-items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 30px 9% 4%;
-        margin-bottom: -100px;
-        z-index: 20;
-    }
-    
-    .portfolio-item {
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        height: 250px;
-        cursor: pointer;
-    }
-    
-    .portfolio-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-    
-    .portfolio-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        padding: 20px;
-        text-align: center;
-    }
-    
-    .portfolio-item:hover .portfolio-overlay {
-        opacity: 1;
-    }
-    
-    .portfolio-item:hover img {
-        transform: scale(1.1);
-    }
-    
-    .portfolio-overlay h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-    
-    .portfolio-overlay p {
-        font-size: 14px;
-    }
-    
-    .footer1 {
-        padding: 0 9% 0;
-        padding-top: 50px;
-        width: 100%;
-        background: #364158;
-    }
-    
-    .contact5 {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 130px 9% 4%;
-    }
-    
-    .contact-container {
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        max-width: 450px;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .contact-container h2 {
-        margin-bottom: 10px;
-        font-size: 24px;
-        color: #1E90FF;
-    }
-    
-    .contact-container p {
-        margin-bottom: 20px;
-        color: #707070;
-        font-size: 16px;
-    }
-    
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border: 1px solid #1E90FF;
-        border-radius: 8px;
-        font-size: 14px;
-        outline: none;
-        /* removes default black outline */
-        transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-        border-color: #007BFF;
-        /* blue border on focus */
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
-        /* soft blue glow */
-    }
-    
-    .contact-form textarea {
-        resize: vertical;
-        min-height: 100px;
-    }
-    
-    .contact-form button {
-        width: 100%;
-        padding: 12px;
-        background-color: #007BFF;
-        border: none;
-        color: white;
-        font-size: 16px;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    
-    .contact-form button:hover {
-        background-color: #0056b3;
-    }
-    /* Responsive styles for portfolio grid */
-    
-    @media (max-width: 992px) {
-        .portfolio-items {
-            grid-template-columns: repeat(2, 1fr);
+        /* Portfolio Section */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100dvh;
+            z-index: -30;
+            background-color: #f4f4f4;
         }
-    }
-    
-    @media (max-width: 576px) {
-        .portfolio-items {
-            grid-template-columns: 1fr;
+        
+        .portfolio-section {
+            background-color: #f8f9fa;
         }
-    }
-    /* Logos Section */
-    
-    .logo-section {
-        background-color: #3f7c65;
-    }
-    
-    .logo-img {
-        max-width: 150px;
-        height: auto;
-        margin: 20px;
-    }
-    
-    @media (max-width: 480px) {
-        .contact-container {
+        
+        h5 {
+            font-size: 2.25rem;
+            margin-top: 40px;
+            font-weight: 600;
+            text-align: center;
+            color: #1E90FF;
+        }
+        /* Portfolio Grid Section */
+        
+        .portfolio-grid {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        
+        .mt-50 {
+            margin-top: 50px;
+        }
+        
+        .portfolio-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px 9% 4%;
+            margin-bottom: -100px;
+            z-index: 20;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
             padding: 20px;
+            text-align: center;
         }
-        .contact-container h2 {
-            font-size: 20px;
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
         }
-    }
-    /*========SCREEN SIZE CONTROL========*/
-    
-    @media screen and (max-width:860px) {
-        .portfolio-items {
-            padding: 30px 2% 2%;
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
         }
+        
+        .portfolio-overlay h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-overlay p {
+            font-size: 14px;
+        }
+        
+        .footer1 {
+            padding: 0px 9% 4%;
+            padding-top: 50px;
+            width: 100%;
+            background: #364158;
+            padding-left: 2%;
+            padding-right: 2%;
+            flex-direction: column;
+            width: 100%;
+        }
+        
         .contact5 {
-            padding: 130px 2% 2%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 130px 9% 4%;
         }
-    }
+        
+        .contact-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .contact-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #1E90FF;
+        }
+        
+        .contact-container p {
+            margin-bottom: 20px;
+            color: #707070;
+            font-size: 16px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #1E90FF;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            /* removes default black outline */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007BFF;
+            /* blue border on focus */
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+            /* soft blue glow */
+        }
+        
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        /* Responsive styles for portfolio grid */
+        
+        @media (max-width: 992px) {
+            .portfolio-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .portfolio-items {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Logos Section */
+        
+        .logo-section {
+            background-color: #3f7c65;
+        }
+        
+        .logo-img {
+            max-width: 150px;
+            height: auto;
+            margin: 20px;
+        }
+        
+        @media (max-width: 480px) {
+            .contact-container {
+                padding: 20px;
+            }
+            .contact-container h2 {
+                font-size: 20px;
+            }
+        }
+        /*========SCREEN SIZE CONTROL========*/
+        
+        @media screen and (max-width:860px) {
+            .portfolio-items {
+                padding: 30px 3% 2%;
+            }
+            .contact5 {
+                padding: 130px 3% 2%;
+            }
+            /* .footer1 {
+                padding-top: 50px;
+                width: 100%;
+                background: #364158;
+                padding-left: 2%;
+                padding-right: 2%;
+            } */
+        }
